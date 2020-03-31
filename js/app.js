@@ -52,7 +52,6 @@ function showCard(card, activePlayer) {
 
 // Removes the images/scores within both players divs and resets styling
 function blackjackDeal() {
-
    let yourImages = document.querySelector('#your-box').querySelectorAll('img');
    let dealerImages = document.querySelector('#dealer-box').querySelectorAll('img');
 
@@ -72,6 +71,9 @@ function blackjackDeal() {
 
    document.querySelector('#dealer-blackjack-result').textContent = 0;
    document.querySelector('#dealer-blackjack-result').style.color = 'white';
+
+   document.querySelector('#blackjack-result').textContent = "Let's Play";
+   document.querySelector('#blackjack-result').style.color = 'white';
 
 };
 
@@ -110,7 +112,7 @@ function dealerLogic() {
       let winner = computeWinner();
       showResult(winner);
    }
-}
+};
 
 // Compute the winner, return who won and update the wins, losses, draws table
 function computeWinner() {
@@ -161,4 +163,4 @@ function showResult(winner) {
 
    document.querySelector('#blackjack-result').textContent = message;
    document.querySelector('#blackjack-result').style.color = messageColor;
-}
+};
